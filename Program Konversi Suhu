@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int suhu[4];
+	suhu[0] = 5;
+	suhu[1] = 4;
+	suhu[2] = 9;
+	suhu[3] = 5;
+	
+	int asal,tujuan,x,y;
+	x = 0;
+	y = 0;
+	float awal,akhir;
+	
+	cout << "PROGRAM KONVERSI SUHU" << endl;
+	cout << endl;
+	cout << "KODE\tSATUAN SUHU" << endl;
+	cout << "--------------------" << endl;
+	cout << "1\tCelcius" << endl;
+	cout << "2\tReamur" << endl;
+	cout << "3\tFahrenheit" << endl;
+	cout << "4\tKelvin" << endl;
+	cout << endl;
+	cout << "Masukkan kode suhu asal : ";
+	cin >> asal;
+	cout << "Masukkan kode suhu tujuan : ";
+	cin >> tujuan;
+	cout  << "Masukkan suhu awal : ";
+	cin >> awal;
+	
+	if (asal == 3) x = 32;
+	if (tujuan == 3) y = 32;
+	if (asal == 4) x = 273;
+	if (tujuan == 4) y = 273;
+	
+	akhir = ((awal-x)*suhu[tujuan-1]/suhu[asal-1])+y;
+	
+	cout << "Suhu ahkir adalah " << akhir << endl;
+	
+	return 0;
+}
